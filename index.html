@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title"></h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <p class="game-intro">Join the numbers and get to the <strong class="tile-name"></strong> <strong>tile!</strong></p>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <center><form class="var-form" action="index.html" method="get"><table>
+      <tr><td class="var-h">Title</td><td><input class="var var-t"     type="text" name="t"     value="2048"       /></td>
+          <td class="var-h">    2</td><td><input class="var var-v2"    type="text" name="v2"    value="2"          /></td></tr>
+      <tr><td class="var-h">    4</td><td><input class="var var-v4"    type="text" name="v4"    value="4"          /></td>
+          <td class="var-h">    8</td><td><input class="var var-v8"    type="text" name="v8"    value="8"          /></td></tr>
+      <tr><td class="var-h">   16</td><td><input class="var var-v16"   type="text" name="v16"   value="16"         /></td>
+          <td class="var-h">   32</td><td><input class="var var-v32"   type="text" name="v32"   value="32"         /></td></tr>
+      <tr><td class="var-h">   64</td><td><input class="var var-v64"   type="text" name="v64"   value="64"         /></td>
+          <td class="var-h">  128</td><td><input class="var var-v128"  type="text" name="v128"  value="128"        /></td></tr>
+      <tr><td class="var-h">  256</td><td><input class="var var-v256"  type="text" name="v256"  value="256"        /></td>
+          <td class="var-h">  512</td><td><input class="var var-v512"  type="text" name="v512"  value="512"        /></td></tr>
+      <tr><td class="var-h"> 1024</td><td><input class="var var-v1024" type="text" name="v1024" value="1024"       /></td>
+          <td class="var-h"> 2048</td><td><input class="var var-v2048" type="text" name="v2048" value="2048"       /></td></tr>
+      <tr><td class="var-h"> More</td><td><input class="var var-m"     type="text" name="m"     value="4096"       /></td>
+          <td class="var-h">  Win</td><td><input class="var var-w"     type="text" name="w"     value="You_win!"   /></td></tr>
+      <tr><td class="var-h"> Over</td><td><input class="var var-o"     type="text" name="o"     value="Game_over!" /></td>
+          <td class="var-h">     </td><td><input class="var-go"        type="submit"            value="Go!"        /></td></tr>
+    </table></form></center>
+    <hr>
+    <p>
+    Forked by <a href="http://github.com/hczhcz" target="_blank">hcz.</a> Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+    <hr>
+    <p>More 2048 games:</p>
+    <p><a href="https://hczhcz.github.io/2048">Upside down</a>, <a href="https://hczhcz.github.io/2048/2047">Role reversal</a>, <a href="https://hczhcz.github.io/2048/20ez">Easy ver</a>, <a href="https://hczhcz.github.io/2048/20mu">喵 ver</a></p>
+  </div>
+
+  <a href="https://github.com/hczhcz/my-2048"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_score_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
