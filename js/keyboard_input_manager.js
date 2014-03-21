@@ -45,7 +45,7 @@ KeyboardInputManager.prototype.listen = function () {
 
     if (!modifiers) {
       if (mapped !== undefined) {
-        if (mapped === 0 || mapped === 2) event.preventDefault();
+        if (event.which === 38 || event.which === 40) event.preventDefault();
         self.emit("move", mapped);
       }
 
