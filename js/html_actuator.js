@@ -2,7 +2,7 @@
 // From http://stackoverflow.com/questions/5448545/how-to-retrieve-get-parameters-from-javascript
 
 function getSearchParameters() {
-      var prmstr = decodeURI(window.location.search.substr(1));
+      var prmstr = decodeURI(window.location.search.substr(1)).replace(/\+/g, " ");
       return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
 }
 
